@@ -18,9 +18,14 @@ if (sum == 7 || sum == 11){
     //if neither of the above conditions are met, output "Push!"
 }
 }
-document.getElementById("game").onsubmit = rollDice;
+window.addEventListener("DOMContentLoaded", () => {
+  const gameForm = document.getElementById("game");
+  if (gameForm) {
+    gameForm.onsubmit = rollDice;
+  }
+});
 
-//Form funtion for sstrings.html
+//Form funtion for strings.html
 
 function validateInput(event)
 {
