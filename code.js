@@ -24,7 +24,10 @@ document.getElementById("game").onsubmit = rollDice;
 
 function validateInput(event)
 {
-    console.log("Testing form Submission");
+    event.preventDefault();
+    const firstNameInput = document.getElementById("firstName");
+    let firstNameString = firstNameInput.value.trim();
+    console.log(firstNameString);
     return false;
 
 
