@@ -35,11 +35,13 @@ function validateInput(event)
     console.log(firstNameString);
     return false;
 
+    event.preventDefault();
     const lastNameInput = document.getElementById("lastname");
     let lastNameString = lastNameInput.value.trim();
     console.log(lastNameString);
     return false;
 
+    event.preventDefault();
     const zipInput = document.getElementById("zipcode");
     let zipString = zipInput.value.trim();
     console.log(zipString);
