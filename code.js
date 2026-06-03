@@ -58,7 +58,7 @@ function validateInput(event)
         return false;
     }
 
-    let sanitizedZipString = "" + zipNumber;
+    sanitizedZipString = "" + zipNumber;
 
     if (zipString.length != 5)
     {
