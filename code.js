@@ -30,7 +30,7 @@ window.addEventListener("DOMContentLoaded", () => {
 function validateInput(event)
 {
     event.preventDefault();
-    const firstNameInput = document.getElementById("firstName");
+    const firstNameInput = document.getElementById("firstname");
     let firstNameString = firstNameInput.value.trim();
     console.log(firstNameString);
     return false;
