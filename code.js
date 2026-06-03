@@ -19,3 +19,21 @@ if (sum == 7 || sum == 11){
 }
 }
 document.getElementById("game").onsubmit = rollDice;
+
+//Form funtion for sstrings.html
+
+function validateInput(event)
+{
+    console.log("Testing form Submission");
+    return false;
+
+
+}
+
+window.addEventListener("DOMContentLoaded", (event) => {
+const form = document.getElementById("myForm");
+if (form) {
+    form.addEventListener("submit", validateInput);
+}
+});
+
