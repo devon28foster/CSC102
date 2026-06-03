@@ -35,7 +35,15 @@ function validateInput(event)
     console.log(firstNameString);
     return false;
 
+    const lastNameInput = document.getElementById("lastname");
+    let lastNameString = lastNameInput.value.trim();
+    console.log(lastNameString);
+    return false;
 
+    const zipInput = document.getElementById("zipcode");
+    let zipString = zipInput.value.trim();
+    console.log(zipString);
+    return false;
 }
 
 window.addEventListener("DOMContentLoaded", (event) => {
