@@ -41,7 +41,36 @@ function validateInput(event)
     const zipInput = document.getElementById("zipcode");
     let zipString = zipInput.value.trim();
     console.log(zipString);
-    return false;
+
+    let firstLastString = firstNameString + " " + lastNameString;
+
+    if (firstLastString.length > 20)
+    {
+        alert("Invalid Input. First and Last name must be less than 20 characters combined.");
+        return false;
+    }
+
+    let zipNumber = parseInt(zipString);
+
+    if (isNaN(zipNumber))
+    {
+        alert("Invalid Input. Zip code must be a number.");
+        return false;
+    }
+
+    let sanitizedZipString = "" + zipNumber;
+
+    if (zipString.length != 5)
+    {
+        alert("Invalid Input. Zip code must be exactly 5 digits.");
+        return false;
+    }    
+    
+    if (zipString && firstLastString && zipString.length == 5)
+    {
+        document.getElementById("catGif").style.display = "block";
+    }
+
 }
 
 window.addEventListener("DOMContentLoaded", (event) => {
@@ -50,4 +79,3 @@ if (form) {
     form.addEventListener("submit", validateInput);
 }
 });
-
