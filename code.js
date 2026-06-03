@@ -52,13 +52,15 @@ function validateInput(event)
 
     let zipNumber = parseInt(zipString);
 
-    if (isNaN(zipNumber))
+    if (isNaN(zipString))
     {
         alert("Invalid Input. Zip code must be a number.");
         return false;
     }
 
-    sanitizedZipString = "" + zipNumber;
+    let sanitizedZipString = "" + zipNumber;
+
+    if ()
 
     if (zipString.length != 5)
     {
