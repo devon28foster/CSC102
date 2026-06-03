@@ -60,8 +60,6 @@ function validateInput(event)
 
     let sanitizedZipString = "" + zipNumber;
 
-    if ()
-
     if (zipString.length != 5)
     {
         alert("Invalid Input. Zip code must be exactly 5 digits.");
