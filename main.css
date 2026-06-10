@@ -26,8 +26,15 @@ footer {
 }
 
 Shades Meme.webp {
+    position: absolute;
     margin-right: 200px;
-    width: 400px;
+    width: 200px;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;   
 }
 
 h1 {
