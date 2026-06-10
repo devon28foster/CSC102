@@ -80,7 +80,7 @@ if (form) {
 }
 });
 
-
+//Variables for index.html meme movement
 const memeImage = document.getElementById("memeimage");
     let posX = 0;
     let posY = 0;
@@ -90,28 +90,33 @@ const memeImage = document.getElementById("memeimage");
 
 //Movement functions for index.html meme to move around the page
 function startMovement() {
-    //identifies the start button from the html page
+    //enables the start button and disables the stop button to prevent multiple intervals from being created
     document.getElementById("startButton").disabled = true;
     document.getElementById("stopButton").disabled = false;
     //calls the moveMeme function every 100 milliseconds to create the movement effect
     intervalId = setInterval(moveMeme, 100);
 }
+//function that moves the mem around the page
 function moveMeme() {
+    //updates the position of the meme by adding the directional values to its position
     posX += directionX * 10;
     posY += directionY * 10;
-
+    //checks if the meme has reached the edge of the window and reverses direction if it has
     if (posX <= 0 || posX >= window.innerWidth - memeImage.offsetWidth) {
         directionX *= -1;
     }
+    //same but for the y direction
     if (posY <= 0 || posY >= window.innerHeight - memeImage.offsetHeight) {
         directionY *= -1;
     }
+    //updates the position of the meme image on the page
     memeImage.style.left = posX + "px";
     memeImage.style.top = posY + "px";  
 }
 
 //function for index.html meme to stop moving around the page
 function stopMovement() {
+    //disables the start button and enables the stop button
     document.getElementById("startButton").disabled = false;
     document.getElementById("stopButton").disabled = true;
     clearInterval(intervalId);
