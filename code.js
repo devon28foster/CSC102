@@ -119,5 +119,36 @@ function stopMovement() {
     //disables the start button and enables the stop button
     document.getElementById("startButton").disabled = false;
     document.getElementById("stopButton").disabled = true;
+    //stops the interval that was created by startMovement stopping the meme from moving
     clearInterval(intervalId);
+}
+
+
+//function to check Palindrome in strings.html
+function checkPalindrome(event){
+    event.preventDefault();
+    const palindromeInput = document.getElementById("palindrome");
+    let palindromeString = palindromeInput.value.trim();
+
+    if (isPalindrome(palindromeString))
+    {
+        document.getElementById("palindromeResult").innerHTML = "The string is a palindrome!";
+    } else {
+        document.getElementById("palindromeResult").innerHTML = "The string is not a palindrome.";
+    }
+    document.getElementById("tryAgainButton").style.display = "block";
+}
+
+function isPalindrome(str) {
+    // Lowercase then compare to reversed version of the string, ignoring spaces
+    let cleaned = str.replace(/\s/g, '').toLowerCase();
+    let reversed = cleaned.split('').reverse().join('');
+    return cleaned === reversed;
+}
+
+function resetPalindrome(event) {
+    event.preventDefault();
+    document.getElementById("palindrome").value = "";
+    document.getElementById("palindromeResult").innerHTML = "";
+    document.getElementById("tryAgainButton").style.display = "none";
 }

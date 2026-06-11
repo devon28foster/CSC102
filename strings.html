@@ -1,3 +1,4 @@
+<!--Devon Foster Jun 11, 2026 -->
 <html>
     <head>
         <link rel="stylesheet" href="main.css">
@@ -36,6 +37,26 @@
             <input type="submit" value="Submit"> 
             </label>
 
+        </form>
+
+        <!--form submits and calls checkPalindrome-->
+        <form id="palForm" onsubmit="checkPalindrome(event);">
+            <!--label so user knows what to input in text box for word to check if palindrome-->
+            <label for="palindrome">Enter a word to check if it's a palindrome:</label>
+            <br>
+            <!--text box for word to check if palindrome-->
+            <input type="text" id="palindrome" name="palindrome">
+            <br>
+            <!--button to submit the form-->
+            <input type="submit" value="Check">
+        </form>
+        <!--display result of palindrome check-->
+        <div id="palindromeResult"></div>
+
+
+        <!--form to reset and allow try again button-->
+        <form id="resetForm" onsubmit="resetPalindrome(event);">
+        <input type="submit" id="tryAgainButton" value="Try Another word?" style="display:none;">
         </form>
 
         <img id="catGif" src="Cat.gif" style="display:none;">
