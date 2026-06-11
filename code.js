@@ -132,16 +132,16 @@ function checkPalindrome(event){
 
     if (isPalindrome(palindromeString))
     {
-        document.getElementById("palindromeResult").innerHTML = "The string is a palindrome!";
+        document.getElementById("palindromeResult").innerHTML = "The word is a palindrome!";
     } else {
-        document.getElementById("palindromeResult").innerHTML = "The string is not a palindrome.";
+        document.getElementById("palindromeResult").innerHTML = "The word is not a palindrome.";
     }
     document.getElementById("tryAgainButton").style.display = "block";
 }
 
 function isPalindrome(str) {
     // Lowercase then compare to reversed version of the string, ignoring spaces
-    let cleaned = str.replace(/\s/g, '').toLowerCase();
+    let cleaned = str.replace(/\s+/g, '').toLowerCase();
     let reversed = cleaned.split('').reverse().join('');
     return cleaned === reversed;
 }
