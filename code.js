@@ -70,7 +70,7 @@ function validateInput(event)
     {
         //if all inputs are valid, display the cat gif 
         document.getElementById("catGif").style.display = "block";
-        
+
         //if all inputs are valid, play the drone sound
         document.getElementById("droneSound").play();
     }
@@ -155,4 +155,41 @@ function resetPalindrome(event) {
     document.getElementById("palindrome").value = "";
     document.getElementById("palindromeResult").innerHTML = "";
     document.getElementById("tryAgainButton").style.display = "none";
+}
+
+function checkAnswer(event) {
+    event.preventDefault();
+    // get the input, trim it
+    const answerInput = document.getElementById("theanswer");
+    let answer = answerInput.value.trim();
+
+    if (answer.length == 0) {
+        document.getElementById("answerResult").innerHTML = "You can't not choose a word!";
+        return false;
+    }
+
+     let firstLetter = answer.charAt(0).toLowerCase();
+     
+    if (!isNaN(firstLetter)) { 
+        document.getElementById("answerResult").innerHTML = "You have to choose a word that starts with a letter!";
+        return false;
+    }
+
+    if (!(firstLetter >= 'a' && firstLetter <= 'z')) { 
+        document.getElementById("answerResult").innerHTML = "You have to choose a word that starts with a letter!";
+        return false;
+    }
+
+    if (firstLetter >= 'a' && firstLetter <= 'j'){
+        document.body.style.backgroundColor = "green"
+    }
+
+    else if (firstLetter >= 'k' && firstLetter <= 't'){
+        document.body.style.backgroundColor = "yellow"
+    }
+
+    else if (firstLetter >= 'u' && firstLetter <= 'z'){
+        document.body.style.backgroundColor = "blue"
+    }
+
 }
