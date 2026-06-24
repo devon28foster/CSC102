@@ -68,7 +68,11 @@ function validateInput(event)
     
     if (zipString && firstLastString && zipString.length == 5)
     {
+        //if all inputs are valid, display the cat gif 
         document.getElementById("catGif").style.display = "block";
+        
+        //if all inputs are valid, play the drone sound
+        document.getElementById("droneSound").play();
     }
 
 }
