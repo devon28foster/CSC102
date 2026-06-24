@@ -157,7 +157,7 @@ function resetPalindrome(event) {
     document.getElementById("tryAgainButton").style.display = "none";
 }
 
-function checkAnswer(event) {
+function theQuestion(event) {
     event.preventDefault();
     // get the input, trim it
     const answerInput = document.getElementById("theanswer");
