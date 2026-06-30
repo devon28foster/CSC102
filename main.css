@@ -8,8 +8,12 @@ decleration block:
 */
 
 body {
-    background-color: rgb(231, 105, 111);
-    color : rgb(0, 0, 0);
+    background-color: #f7f3f0;
+    color: #2b2b2b;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    position: relative;
+    min-height: 100vh;
+    overflow: auto;
 }
 
 nav {
@@ -20,49 +24,52 @@ nav {
     padding: 18px 40px;
     background-color: #2b2b2b;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 nav a {
     color: #f4f4f4;
     text-decoration: none;
-    font-family: 'Segoe UI', Arial, sans-serif;
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 0.5px;
-    transition: color 0.2s ease;
 }
 
 nav a:hover {
-    color: #e7696f;
-}
-
-footer {
-    text-align: center;
-    margin-right: 200px;
-}
-
-body {
-    position: relative;
-    min-height: 100vh;
-    overflow: auto;   
+    color: #d97757;
 }
 
 h1 {
     text-align: center;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-weight: 700;
+    color: #2b2b2b;
+    letter-spacing: 1px;
+    margin-top: 40px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2b2b2b;
+    color: #f4f4f4;
+    margin-top: 60px;
 }
 
 table {
-  border-collapse: collapse;
-  width: 100%;
+    border-collapse: collapse;
+    width: 100%;
 }
 
 th, td {
-  border: 1px solid #ddd;
-  padding: 12px;
-  text-align: left;
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
 }
 
 th {
-  background-color: #f4f4f4;
-  font-weight: bold;
+    background-color: #f4f4f4;
+    font-weight: bold;
 }
