@@ -11,12 +11,29 @@ body {
     background-color: rgb(231, 105, 111);
     color : rgb(0, 0, 0);
 }
+
 nav {
     display: flex;
+    align-items: center;
+    gap: 30px;
     width: 100%;
-    padding: 10px;
-    gap: 20px;
-    line-height: 30px;
+    padding: 18px 40px;
+    background-color: #2b2b2b;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+nav a {
+    color: #f4f4f4;
+    text-decoration: none;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #e7696f;
 }
 
 footer {
