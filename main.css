@@ -1,3 +1,8 @@
+/*
+Devon Foster
+Jun 30, 2026
+CSC 102
+*/
 /* 
 decleration block:
 
@@ -13,11 +18,14 @@ body {
     font-family: 'Segoe UI', Arial, sans-serif;
     position: relative;
     min-height: 100vh;
+    /* show scrollbars only if content overflows */
     overflow: auto;
+    /* allows flexbox to work for future elements */
     display: flex;
+    /* states that the flex items should be arranged in a column */
     flex-direction: column;
 }
-
+/* style for buttons and input elements */
 button,
 input[type="submit"],
 input[type="button"] {
@@ -31,7 +39,7 @@ input[type="button"] {
     cursor: pointer;
     border-radius: 4px;
 }
-
+/*button hover effect */
 button:hover,
 input[type="submit"]:hover,
 input[type="button"]:hover {
@@ -39,6 +47,7 @@ input[type="button"]:hover {
     color: #f4f4f4;
 }
 
+/*a net to catch all buttons to center them in a row*/
 .button-row,
 form,
 p:has(button),
@@ -47,7 +56,7 @@ p:has(input[type="button"]) {
     justify-content: center;
     gap: 10px;
 }
-
+/*nav bar styling*/
 nav {
     display: flex;
     align-items: center;
@@ -61,6 +70,7 @@ nav {
     z-index: 10;
 }
 
+/*nav links styling*/
 nav a {
     color: #2b2b2b;
     text-decoration: none;
@@ -68,12 +78,12 @@ nav a {
     font-weight: 600;
     letter-spacing: 0.5px;
 }
-
+/*nav link hover effect*/
 nav a:hover {
     color: #d97757;
 }
 
-
+/*header styling*/
 h1 {
     text-align: center;
     font-family: 'Segoe UI', Arial, sans-serif;
@@ -82,7 +92,7 @@ h1 {
     letter-spacing: 1px;
     margin-top: 40px;
 }
-
+/*ordered list for boards styling*/
 ol {
     display: flex;
     flex-direction: column;
@@ -94,7 +104,7 @@ ol li {
     margin-bottom: 16px;
     font-size: 18px;
 }
-
+/*shades meme positioning*/
 #memeimage {
     position: absolute;
     width: 200px;
@@ -102,7 +112,7 @@ ol li {
     top: 300px;
 }
 
-
+/*footer styling*/
 footer {
     text-align: center;
     padding: 20px;
@@ -110,9 +120,10 @@ footer {
     color: #2b2b2b;
     margin-top: auto;
 }
-
+/*form styling*/
 form {
     display: flex;
+    /* allows the form elements to wrap to the next line if they don't fit in one row */
     flex-wrap: wrap;
     align-items: center;
     gap: 24px;
@@ -123,37 +134,38 @@ form {
     border-radius: 6px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
-
+/*form label styling*/
 form label {
     font-weight: 600;
     margin-right: 8px;
 }
-
+/*form input text styling*/
 form input[type="text"] {
     padding: 10px 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 15px;
 }
-
+/*form input text focus styling*/
 form input[type="text"]:focus {
     outline: none;
     border-color: #d97757;
     box-shadow: 0 0 0 2px rgba(217, 119, 87, 0.2);
 }
-
+/*table styling*/
 table {
+    /*make sure the table borders are collapsed into a single border*/
     border-collapse: collapse;
     width: 80%;
     margin: 40px auto;
 }
-
+/*table header and data cell styling*/
 th, td {
     border: 1px solid #ddd;
     padding: 12px;
     text-align: left;
 }
-
+/*table header styling*/
 th {
     background-color: #f4f4f4;
     font-weight: bold;

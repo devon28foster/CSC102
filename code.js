@@ -17,6 +17,7 @@ if (sum == 7 || sum == 11){
     document.getElementById("gameoutput").innerHTML = "You rolled a " + die1 + " and a " + die2 + " for a total of " + sum + ". Push!";
     //if neither of the above conditions are met, output "Push!"
 }
+//wait until the browser has loaded the html before trying to access the game form then run the game form 
 }
 window.addEventListener("DOMContentLoaded", () => {
   const gameForm = document.getElementById("game");
