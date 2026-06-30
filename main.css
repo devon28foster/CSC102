@@ -11,12 +11,11 @@ body {
     background-color: rgb(231, 105, 111);
     color : rgb(0, 0, 0);
 }
-
-nav{
-    height: 600px;
-    width: 200px;
-    float: left;
-    padding: 5px;
+nav {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    gap: 20px;
     line-height: 30px;
 }
 
