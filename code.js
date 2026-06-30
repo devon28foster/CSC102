@@ -30,43 +30,46 @@ window.addEventListener("DOMContentLoaded", () => {
 
 function validateInput(event)
 {
+    //prevent the form from submitting and refreshing the page
     event.preventDefault();
+    //get and store firstname from strings
     const firstNameInput = document.getElementById("firstname");
+    //trims any spaces before or after
     let firstNameString = firstNameInput.value.trim();
-    console.log(firstNameString);
-
+   
+    //get and store lastname from strings
     const lastNameInput = document.getElementById("lastname");
+    //trim spaces
     let lastNameString = lastNameInput.value.trim();
-    console.log(lastNameString);
-
+    
+    //get and store zipcode from strings
     const zipInput = document.getElementById("zipcode");
+    //trim spaces
     let zipString = zipInput.value.trim();
-    console.log(zipString);
-
+    
+    //store first name last name and space
     let firstLastString = firstNameString + " " + lastNameString;
-
+    //test is first and last input is less that 20 characters combined 
     if (firstLastString.length > 20)
     {
         alert("Invalid Input. First and Last name must be less than 20 characters combined.");
         return false;
     }
-
+    //converts zipnumber string to numbers
     let zipNumber = parseInt(zipString);
-
+    //checks if zip code is only numbers
     if (isNaN(zipString))
     {
         alert("Invalid Input. Zip code must be a number.");
         return false;
     }
-
-    let sanitizedZipString = "" + zipNumber;
-
+    //checks if zip code is exactly 5 digits
     if (zipString.length != 5)
     {
         alert("Invalid Input. Zip code must be exactly 5 digits.");
         return false;
     }    
-    
+    //if all conditions above are met show cat gif and drone sound.
     if (zipString && firstLastString && zipString.length == 5)
     {
         //if all inputs are valid, display the cat gif 
@@ -77,7 +80,7 @@ function validateInput(event)
     }
 
 }
-
+//wait until the browser has loaded the html before trying to access the strings form then run the strings form
 window.addEventListener("DOMContentLoaded", (event) => {
 const form = document.getElementById("myForm");
 if (form) {
@@ -131,26 +134,30 @@ function stopMovement() {
 
 //function to check Palindrome in strings.html
 function checkPalindrome(event){
+    //prevent page from reloading
     event.preventDefault();
+    //pull palindrom result from strings and store it
     const palindromeInput = document.getElementById("palindrome");
+    //trim spaces from palindrome
     let palindromeString = palindromeInput.value.trim();
-
+    //tells user that they cant enter nothing
     if (palindromeString.length == 0) {
         document.getElementById("palindromeResult").innerHTML = "You can't not choose a word!";
         return false;
     }
-
+    //tests palindrone for no numbers or symbols
     if (!/^[a-zA-Z]+$/.test(palindromeString)) {
         document.getElementById("palindromeResult").innerHTML = "Please enter letters only, no numbers or symbols.";
         return false;
     }
-
+    //lets user know where the word they entered is palindrome
     if (isPalindrome(palindromeString))
     {
         document.getElementById("palindromeResult").innerHTML = "The word is a palindrome!";
     } else {
         document.getElementById("palindromeResult").innerHTML = "The word is not a palindrome.";
     }
+    //adds the try again button but hides it until after user inputs word
     document.getElementById("tryAgainButton").style.display = "block";
 }
 
@@ -160,45 +167,46 @@ function isPalindrome(str) {
     let reversed = cleaned.split('').reverse().join('');
     return cleaned === reversed;
 }
-
+//resets palindron when try again button is pushed
 function resetPalindrome(event) {
     event.preventDefault();
     document.getElementById("palindrome").value = "";
     document.getElementById("palindromeResult").innerHTML = "";
     document.getElementById("tryAgainButton").style.display = "none";
 }
-
+//function for the question page
 function theQuestion(event) {
+    //prevents page from reloading
     event.preventDefault();
-    // get the input, trim it
+    // get the answer and trim
     const answerInput = document.getElementById("theanswer");
     let answer = answerInput.value.trim();
-
+    //checks to make sure user submitted something
     if (answer.length == 0) {
         document.getElementById("answerResult").innerHTML = "You can't not choose a word!";
         return false;
     }
-
+    //string manipulation to change first character to lowercase 
      let firstLetter = answer.charAt(0).toLowerCase();
-     
+     //tests if user inputted numbers
     if (!isNaN(firstLetter)) { 
         document.getElementById("answerResult").innerHTML = "You have to choose a word that starts with a letter!";
         return false;
     }
-
+    //checks to make sure input is only lower case letters
     if (!(firstLetter >= 'a' && firstLetter <= 'z')) { 
         document.getElementById("answerResult").innerHTML = "You have to choose a word that starts with a letter!";
         return false;
     }
-
+    // if the first letter entered is a-j the background turns green
     if (firstLetter >= 'a' && firstLetter <= 'j'){
         document.body.style.backgroundColor = "green"
     }
-
+    //if the first letter entered is k-t the background turns yellow
     else if (firstLetter >= 'k' && firstLetter <= 't'){
         document.body.style.backgroundColor = "yellow"
     }
-
+    //if the first letter entered is u-z the backround turns blue 
     else if (firstLetter >= 'u' && firstLetter <= 'z'){
         document.body.style.backgroundColor = "blue"
     }
