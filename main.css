@@ -18,6 +18,23 @@ body {
     flex-direction: column;
 }
 
+button {
+    background-color: #d8cfc0;
+    color: #2b2b2b;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 16px 32px;
+    margin: 6px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #d97757;
+    color: #f4f4f4;
+}
+
 nav {
     display: flex;
     align-items: center;
@@ -60,23 +77,6 @@ footer {
     background-color: #d8cfc0;
     color: #2b2b2b;
     margin-top: auto;
-}
-
-button {
-    background-color: #d8cfc0;
-    color: #2b2b2b;
-    border: none;
-    font-size: 20px;
-    font-weight: 600;
-    padding: 16px 32px;
-    margin: 6px;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-button:hover {
-    background-color: #d97757;
-    color: #f4f4f4;
 }
 
 table {
