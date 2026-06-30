@@ -134,6 +134,16 @@ function checkPalindrome(event){
     const palindromeInput = document.getElementById("palindrome");
     let palindromeString = palindromeInput.value.trim();
 
+    if (palindromeString.length == 0) {
+        document.getElementById("palindromeResult").innerHTML = "You can't not choose a word!";
+        return false;
+    }
+
+    if (!/^[a-zA-Z]+$/.test(palindromeString)) {
+        document.getElementById("palindromeResult").innerHTML = "Please enter letters only, no numbers or symbols.";
+        return false;
+    }
+
     if (isPalindrome(palindromeString))
     {
         document.getElementById("palindromeResult").innerHTML = "The word is a palindrome!";
