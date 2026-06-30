@@ -96,7 +96,7 @@ ol li {
 #memeimage {
     position: absolute;
     width: 200px;
-    margin-right: 150px;
+    margin-right: 100px;
     top: 300px;
 }
 
@@ -107,6 +107,37 @@ footer {
     background-color: #d8cfc0;
     color: #2b2b2b;
     margin-top: auto;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 24px;
+    background-color: #ffffff;
+    padding: 24px 32px;
+    margin: 30px auto;
+    width: 80%;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+form label {
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+form input[type="text"] {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+form input[type="text"]:focus {
+    outline: none;
+    border-color: #d97757;
+    box-shadow: 0 0 0 2px rgba(217, 119, 87, 0.2);
 }
 
 table {
