@@ -37,6 +37,15 @@ input[type="button"]:hover {
     color: #f4f4f4;
 }
 
+.button-row,
+form,
+p:has(button),
+p:has(input[type="button"]) {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
 nav {
     display: flex;
     align-items: center;
